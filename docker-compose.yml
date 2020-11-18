@@ -1,0 +1,7 @@
+version: "3.5"
+
+services:
+        sparv-pipeline:
+                build:
+                        context: sparv-pipeline/.
+
