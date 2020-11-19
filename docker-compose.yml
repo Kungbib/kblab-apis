@@ -1,7 +1,13 @@
 version: "3.5"
 
 services:
-        sparv-pipeline:
-                build:
-                        context: sparv-pipeline/.
+    sparv-pipeline:
+        build:
+            context: sparv-pipeline/.
+        volumes:
+            - ./sparv-pipeline/example-corpus:/corpus
+            - ./sparv-pipeline/config:/config
+        environment:
+            - SPARV_DIR=/config
+        #command: sparv -d /corpus run
 
